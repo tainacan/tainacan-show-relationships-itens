@@ -1,1 +1,1 @@
-# tainacan-show-relationships-itens
+# tainacan-show-relationships-items
