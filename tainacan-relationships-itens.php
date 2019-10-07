@@ -62,6 +62,10 @@ add_action('tainacan-interface-single-item-after-metadata', function() {
 	if ( ! $have_items->found_posts) {
 		return;
 	}
+
+	$show_name = get_theme_option('show_name') == 'no' ? 'false' : 'true';
+	$layout = get_theme_option('layout') == 'list' ?  'list' : 'grid';
+	$show_search_bar = get_theme_option('show_search_bar') == 'no' ?  'false' : 'true';
 	
 	?>
 	<div class="border-bottom border-jelly-bean tainacan-title-page" style="border-width: 2px !important; margin-top: 30px;">
@@ -81,10 +85,10 @@ add_action('tainacan-interface-single-item-after-metadata', function() {
 		search-url="<?php echo $search_url; ?>"
 		collection-id="<?php echo $meta_col_id; ?>"
 		show-image="true"
-		show-name="true"
-		show-search-bar="true"
+		show-name="<?php echo $show_name;?>"
+		show-search-bar="<?php echo $show_search_bar;?>"
 		show-collection-header="0"
-		layout="grid"
+		layout="<?php echo $layout;?>"
 		collection-background-color=""
 		collection-text-color=""
 		grid-margin=""

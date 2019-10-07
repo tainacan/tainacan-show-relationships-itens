@@ -4,6 +4,9 @@ function get_tncrelationshipsitems_default_options() {
 	// Coloquei aqui o nome e o valor padrão de cada opção que você criar
 	return array(
 		'main_collection_id' => '',
+		'show_name' => 'no',
+		'layout' => 'list',
+		'show_search_bar' => 'yes'
 	);
 }
 
@@ -44,6 +47,25 @@ function tncrelationshipsitems_options_page_callback_function() {
 					<label><strong>Coleção principal</strong></label><br/>
 					<?php wp_dropdown_pages($dropdown_args); ?>
 				</div>
+
+				<h3>Exibir nome</h3>
+				<select name="tncrelationshipsitems_options[show_name]">
+					<option value="yes" <?php  echo get_theme_option('show_name') == 'yes' ? 'selected' : '' ?>>Sim</option>
+					<option value="no" <?php  echo get_theme_option('show_name') == 'no' ? 'selected' : '' ?>>Não</option>
+				</select>
+
+				<h3>Exibir como</h3>
+				<select name="tncrelationshipsitems_options[layout]">
+					<option value="list" <?php  echo get_theme_option('layout') == 'list' ? 'selected' : '' ?>>Lista</option>
+					<option value="grid" <?php  echo get_theme_option('layout') == 'grid' ? 'selected' : '' ?>>Grade</option>
+				</select>
+
+				<h3>Exibir barra de busca</h3>
+				<select name="tncrelationshipsitems_options[show_search_bar]">
+					<option value="yes" <?php  echo get_theme_option('show_search_bar') == 'yes' ? 'selected' : '' ?>>Sim</option>
+					<option value="no" <?php  echo get_theme_option('show_search_bar') == 'no' ? 'selected' : '' ?>>Não</option>
+				</select>
+
 			</div>
 
 			<p class="textright clear prepend-top">
@@ -52,6 +74,10 @@ function tncrelationshipsitems_options_page_callback_function() {
 		</form>
 	</div>
 	<?php
+}
+
+function tncrelationshipsitems_options_show_name() {
+	?><?php
 }
 
 function get_theme_option($option_name) {
