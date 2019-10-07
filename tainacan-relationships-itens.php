@@ -23,6 +23,7 @@ add_action('tainacan-interface-single-item-after-metadata', function() {
 	$r = $meta_repo->fetch_one([
 		'metadata_type' => 'Tainacan\Metadata_Types\Relationship',
 		'collection_id' => $main_collection_id,
+		'post_status' => array('publish', 'private'),
 		'meta_query' => [
 			[
 				'key' => 'metadata_type_options',
