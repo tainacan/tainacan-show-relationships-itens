@@ -67,7 +67,7 @@ add_action('tainacan-interface-single-item-after-metadata', function() {
 	<div class="border-bottom border-jelly-bean tainacan-title-page" style="border-width: 2px !important; margin-top: 30px;">
 		<ul class="list-inline mb-1">
 			<li class="list-inline-item text-midnight-blue font-weight-bold title-page">
-				Obras de <?php echo $current_item->get_title(); ?>
+				itens relacionados a <?php echo $current_item->get_title(); ?>
 			</li>
 			
 			<li class="list-inline-item float-right title-back">
