@@ -31,10 +31,11 @@ function tncrelationshipsitems_options_page_callback_function() {
 		'post_type'        => 'tainacan-collection',
 		'selected'         => get_theme_option('main_collection_id'),
 		'name'             => 'tncrelationshipsitems_options[main_collection_id]',
+		'post_status'      => array('publish', 'private')
 	);
 	?>
 	<div class="wrap span-20">
-		<h2>Opções do Museu Villa Lobos</h2>
+		<h2>Opções do Museu para itens relacionados</h2>
 
 		<form action="options.php" method="post" class="clear prepend-top">
 			<?php settings_fields('tncrelationshipsitems_options_options'); ?>
