@@ -93,7 +93,7 @@ add_action('tainacan-interface-single-item-after-metadata', function() {
 		collection-text-color=""
 		grid-margin=""
 		max-items-number="12"
-		order="random"
+		order="asc"
 		tainacan-api-root=<?php echo home_url('wp-json/tainacan/v2'); ?>
 		tainacan-base-url="<?php echo $TAINACAN_BASE_URL; ?>"
 		></div>
